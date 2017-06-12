@@ -12,6 +12,17 @@
 		92E25AFA1EEEEFF000B6B9C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E25AF81EEEEFF000B6B9C5 /* Main.storyboard */; };
 		92E25AFC1EEEEFF000B6B9C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E25AFB1EEEEFF000B6B9C5 /* Assets.xcassets */; };
 		92E25AFF1EEEEFF000B6B9C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E25AFD1EEEEFF000B6B9C5 /* LaunchScreen.storyboard */; };
+		92E25B071EEF011200B6B9C5 /* RidingOrDrivingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E25B061EEF011200B6B9C5 /* RidingOrDrivingViewController.swift */; };
+		92E25B091EEF012300B6B9C5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E25B081EEF012300B6B9C5 /* ProfileViewController.swift */; };
+		92E25B0B1EEF013C00B6B9C5 /* AddRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E25B0A1EEF013C00B6B9C5 /* AddRideViewController.swift */; };
+		92E25B0D1EEF014900B6B9C5 /* AddDriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E25B0C1EEF014900B6B9C5 /* AddDriveViewController.swift */; };
+		92E25B0F1EEF016000B6B9C5 /* RideOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E25B0E1EEF016000B6B9C5 /* RideOptionsTableViewController.swift */; };
+		92E25B111EEF018300B6B9C5 /* RideOptionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E25B101EEF018300B6B9C5 /* RideOptionDetailsViewController.swift */; };
+		92E25B131EEF019F00B6B9C5 /* RideSuccessfullyAddedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E25B121EEF019F00B6B9C5 /* RideSuccessfullyAddedViewController.swift */; };
+		92E25B191EEF01EE00B6B9C5 /* MyRideDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E25B181EEF01EE00B6B9C5 /* MyRideDetailsViewController.swift */; };
+		92E25B1B1EEF01F700B6B9C5 /* MyDriveDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E25B1A1EEF01F700B6B9C5 /* MyDriveDetailsViewController.swift */; };
+		92E25B1D1EEF024200B6B9C5 /* MyRidesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E25B1C1EEF024200B6B9C5 /* MyRidesTableViewController.swift */; };
+		92E25B1F1EEF026C00B6B9C5 /* MyDrivesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E25B1E1EEF026C00B6B9C5 /* MyDrivesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +33,17 @@
 		92E25AFB1EEEEFF000B6B9C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92E25AFE1EEEEFF000B6B9C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92E25B001EEEEFF000B6B9C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92E25B061EEF011200B6B9C5 /* RidingOrDrivingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RidingOrDrivingViewController.swift; sourceTree = "<group>"; };
+		92E25B081EEF012300B6B9C5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		92E25B0A1EEF013C00B6B9C5 /* AddRideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRideViewController.swift; sourceTree = "<group>"; };
+		92E25B0C1EEF014900B6B9C5 /* AddDriveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDriveViewController.swift; sourceTree = "<group>"; };
+		92E25B0E1EEF016000B6B9C5 /* RideOptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideOptionsTableViewController.swift; sourceTree = "<group>"; };
+		92E25B101EEF018300B6B9C5 /* RideOptionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideOptionDetailsViewController.swift; sourceTree = "<group>"; };
+		92E25B121EEF019F00B6B9C5 /* RideSuccessfullyAddedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideSuccessfullyAddedViewController.swift; sourceTree = "<group>"; };
+		92E25B181EEF01EE00B6B9C5 /* MyRideDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRideDetailsViewController.swift; sourceTree = "<group>"; };
+		92E25B1A1EEF01F700B6B9C5 /* MyDriveDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDriveDetailsViewController.swift; sourceTree = "<group>"; };
+		92E25B1C1EEF024200B6B9C5 /* MyRidesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyRidesTableViewController.swift; path = ../MyRidesTableViewController.swift; sourceTree = "<group>"; };
+		92E25B1E1EEF026C00B6B9C5 /* MyDrivesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDrivesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +76,20 @@
 		92E25AF31EEEEFF000B6B9C5 /* FirstApp */ = {
 			isa = PBXGroup;
 			children = (
+				92E25B1E1EEF026C00B6B9C5 /* MyDrivesTableViewController.swift */,
+				92E25B1C1EEF024200B6B9C5 /* MyRidesTableViewController.swift */,
 				92E25AF41EEEEFF000B6B9C5 /* AppDelegate.swift */,
 				92E25AF61EEEEFF000B6B9C5 /* ViewController.swift */,
 				92E25AF81EEEEFF000B6B9C5 /* Main.storyboard */,
+				92E25B181EEF01EE00B6B9C5 /* MyRideDetailsViewController.swift */,
+				92E25B1A1EEF01F700B6B9C5 /* MyDriveDetailsViewController.swift */,
+				92E25B121EEF019F00B6B9C5 /* RideSuccessfullyAddedViewController.swift */,
+				92E25B101EEF018300B6B9C5 /* RideOptionDetailsViewController.swift */,
+				92E25B0E1EEF016000B6B9C5 /* RideOptionsTableViewController.swift */,
+				92E25B0A1EEF013C00B6B9C5 /* AddRideViewController.swift */,
+				92E25B0C1EEF014900B6B9C5 /* AddDriveViewController.swift */,
+				92E25B081EEF012300B6B9C5 /* ProfileViewController.swift */,
+				92E25B061EEF011200B6B9C5 /* RidingOrDrivingViewController.swift */,
 				92E25AFB1EEEEFF000B6B9C5 /* Assets.xcassets */,
 				92E25AFD1EEEEFF000B6B9C5 /* LaunchScreen.storyboard */,
 				92E25B001EEEEFF000B6B9C5 /* Info.plist */,
@@ -136,8 +169,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92E25B071EEF011200B6B9C5 /* RidingOrDrivingViewController.swift in Sources */,
 				92E25AF71EEEEFF000B6B9C5 /* ViewController.swift in Sources */,
+				92E25B111EEF018300B6B9C5 /* RideOptionDetailsViewController.swift in Sources */,
+				92E25B0B1EEF013C00B6B9C5 /* AddRideViewController.swift in Sources */,
+				92E25B0F1EEF016000B6B9C5 /* RideOptionsTableViewController.swift in Sources */,
+				92E25B1B1EEF01F700B6B9C5 /* MyDriveDetailsViewController.swift in Sources */,
+				92E25B091EEF012300B6B9C5 /* ProfileViewController.swift in Sources */,
+				92E25B131EEF019F00B6B9C5 /* RideSuccessfullyAddedViewController.swift in Sources */,
+				92E25B191EEF01EE00B6B9C5 /* MyRideDetailsViewController.swift in Sources */,
 				92E25AF51EEEEFF000B6B9C5 /* AppDelegate.swift in Sources */,
+				92E25B1D1EEF024200B6B9C5 /* MyRidesTableViewController.swift in Sources */,
+				92E25B0D1EEF014900B6B9C5 /* AddDriveViewController.swift in Sources */,
+				92E25B1F1EEF026C00B6B9C5 /* MyDrivesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
