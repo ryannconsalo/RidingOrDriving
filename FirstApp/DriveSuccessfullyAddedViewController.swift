@@ -1,18 +1,15 @@
 //
-//  AddDriveViewController.swift
+//  DriveSuccessfullyAddedViewController.swift
 //  FirstApp
 //
-//  Created by Ryann Consalo on 2017/06/12.
+//  Created by Ryann Consalo on 2017/06/13.
 //  Copyright © 2017 Ryann Consalo. All rights reserved.
 //
 
 import UIKit
 
-class AddDriveViewController: UIViewController {
+class DriveSuccessfullyAddedViewController: UIViewController {
 
-    @IBAction func backButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
