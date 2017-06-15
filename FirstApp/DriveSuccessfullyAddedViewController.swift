@@ -22,6 +22,10 @@ class DriveSuccessfullyAddedViewController: UIViewController {
     }
     
 
+    @IBAction func homeButton(_ sender: Any) {
+        let homeView = self.storyboard?.instantiateViewController(withIdentifier: "HomeView")
+        self.present(homeView!, animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

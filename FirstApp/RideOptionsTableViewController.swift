@@ -7,8 +7,18 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class RideOptionsTableViewController: UITableViewController {
+    
+    
+    var university = UserDefaults.standard.string(forKey: "university")
+    var options = [String]()
+    var reference : DatabaseReference = Database.database().reference().child("Trips")
+    var start : String?
+    var destination : String?
+    var date : String?
     
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -16,12 +26,23 @@ class RideOptionsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var refData = reference.child(university!)
+        let query = refData.queryOrdered(byChild: "Date").queryEqual(toValue: date)
+        
+        
+        
+        
+        print(query)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        //ref?.child("Trips").observe(.childAdded, with: { (snapshot) in
+        
     }
 
     override func didReceiveMemoryWarning() {

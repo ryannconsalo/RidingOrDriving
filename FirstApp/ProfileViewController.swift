@@ -16,12 +16,21 @@ class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     
     @IBOutlet weak var universityPicker: UIPickerView!
     
-    @IBAction func backButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+    
+    
+    @IBAction func logOutButton(_ sender: Any) {
+        let logInView = self.storyboard?.instantiateViewController(withIdentifier: "LogIn")
+        self.present(logInView!, animated: true, completion: nil)
+
+        
     }
-    var pickerData : [String] = ["UVA", "Penn State", "Fordham"]
+    var pickerData : [String] = ["Berkeley", "Brown", "Bucknell", "Duke", "Fordham", "Penn State", "University Michigan", "UPenn", "University Pittsburg", "USC", "UVA", "Villanova"]
     
     let defaults: UserDefaults = UserDefaults.standard
+    
+    var university : String?
+    
+
     
     
     override func viewDidLoad() {
@@ -34,6 +43,21 @@ class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         //pickerData = ["UVA", "Penn State", "Fordham"]
 
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        var na : String? = UserDefaults.standard.string(forKey: "name")
+        var num: String? = UserDefaults.standard.string(forKey: "phoneNumber")
+        var r : Int? = UserDefaults.standard.integer(forKey: "row")
+        if na != nil {
+            nameTextField.text = na
+        }
+        if num != nil {
+            phoneNumberTextField.text = num
+        }
+        if r != nil {
+            self.universityPicker.selectRow(r!, inComponent: 0, animated: false)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -41,9 +65,11 @@ class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        defaults.set(nameTextField, forKey: "name")
-        defaults.set(phoneNumberTextField, forKey: "phoneNumber")
-        defaults.set(universityPicker, forKey: "university")
+        defaults.set(nameTextField.text, forKey: "name")
+        defaults.set(phoneNumberTextField.text, forKey: "phoneNumber")
+        //defaults.set(university, forKey: "university")
+        //defaults.set(pickRow, forKey: "row")
+        
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -60,6 +86,11 @@ class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        defaults.set(pickerData[row], forKey: "university")
+        defaults.set(row, forKey: "row")
     }
     
     /*
