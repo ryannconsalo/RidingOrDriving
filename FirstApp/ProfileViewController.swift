@@ -10,6 +10,11 @@ import UIKit
 
 class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    @IBAction func homeButton(_ sender: Any) {
+        let homeView = self.storyboard?.instantiateViewController(withIdentifier: "HomeView")
+        self.present(homeView!, animated: true, completion: nil)
+    }
+    
     @IBOutlet weak var nameTextField: UITextField!
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
@@ -36,11 +41,11 @@ class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.hideKeyboardWhenTappedAround() 
+        
         self.universityPicker.delegate = self
         self.universityPicker.dataSource = self
-        // Do any additional setup after loading the view.
         
-        //pickerData = ["UVA", "Penn State", "Fordham"]
 
     }
     
@@ -114,4 +119,16 @@ class ProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     }
     */
 
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

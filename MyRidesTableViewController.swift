@@ -7,12 +7,24 @@
 //
 
 import UIKit
+import RealmSwift
+import Realm
 
 class MyRidesTableViewController: UITableViewController {
 
+    var trip : TripRealm?
+    
+    var myTrips : RLMResults<TripRealm> {
+        get {
+            return TripRealm.allObjects() as! RLMResults<TripRealm>
+        }
+    }
+    
+    
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,23 +44,24 @@ class MyRidesTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return Int(myTrips.count)
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myTrips", for: indexPath)
 
-        // Configure the cell...
-
+        cell.textLabel?.text = myTrips.object(at: UInt(indexPath.row)).driver
+        cell.detailTextLabel?.text = myTrips.object(at: UInt(indexPath.row)).date
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -93,6 +106,30 @@ class MyRidesTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
+
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "navToDetails" {
+            
+            let rideDetails = segue.destination as! UINavigationController
+            let rideDetails2 = rideDetails.topViewController as! MyRideDetailsViewController
+            
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPath(for: cell)
+            
+            rideDetails2.trip = myTrips.object(at: UInt((indexPath?.row)!))
+            rideDetails2.driver = myTrips.object(at: UInt((indexPath?.row)!)).driver
+            rideDetails2.startingPoint = myTrips.object(at: UInt((indexPath?.row)!)).startingPoint
+            rideDetails2.destination = myTrips.object(at: UInt((indexPath?.row)!)).destination
+            rideDetails2.date = myTrips.object(at: UInt((indexPath?.row)!)).date
+            
+        }
+        
+    }
+
+    
 
 }

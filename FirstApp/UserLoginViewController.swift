@@ -14,19 +14,15 @@ class UserLoginViewController: UIViewController, LoginButtonDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       /*
+       
+        //let accessToken = AccessToken.currentAccessToken()
+            //AccessToken.current
         if let accessToken = AccessToken.current {
-            //AccessToken.current?.userId
-        }
-        
-        if log
-        
-        if loginButtonDidCompleteLogin(<#T##loginButton: LoginButton##LoginButton#>, result: <#T##LoginResult#>) {
+        //if loginButtonDidCompleteLogin(<#T##loginButton: LoginButton##LoginButton#>, result: <#T##LoginResult#>) {
             let homeView = self.storyboard?.instantiateViewController(withIdentifier: "HomeView")
             self.present(homeView!, animated: true, completion: nil)
-
         }
-        */
+        
         
         let loginButton = LoginButton(readPermissions: [ .publicProfile])
         loginButton.delegate = self
@@ -57,6 +53,7 @@ class UserLoginViewController: UIViewController, LoginButtonDelegate {
         */
         
         // Successfully logged in --> what to do now
+        UserDefaults.standard.set("true", forKey: "loggedIn")
         let homeView = self.storyboard?.instantiateViewController(withIdentifier: "HomeView")
         self.present(homeView!, animated: true, completion: nil)
         
